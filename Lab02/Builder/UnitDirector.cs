@@ -11,21 +11,13 @@
 
         public IUnit ConstructUnit(string name, int height, string stature, string specialization, string action)
         {
-            _unitBuilder
+           return  _unitBuilder
                 .SetUnitName(name)
                 .SetUnitHeight(height)
-                .SetUnitStature(stature);
-            
-            // foreach (var cloth in clothes)
-            // {
-            //     _unitBuilder.SetUnitClothes(cloth);
-            // }
-
-            _unitBuilder
+                .SetUnitStature(stature)
                 .SetUnitSpecialization(specialization)
-                .SetAction(action);
-
-            return _unitBuilder.GetTotalUnit();
+                .SetAction(action)
+                .GetTotalUnit();
         }
     }
 }
